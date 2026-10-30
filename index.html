@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday, Sagar! 🎂 The Official Birthday Surprise</title>
+  <meta name="description" content="An extremely important birthday surprise for Sagar: a fake statistics dashboard, a quiz, a cake, and a very legitimate gift.">
+  <meta name="theme-color" content="#0F0B1F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Happy Birthday, Sagar! 🎂">
+  <meta property="og:description" content="BREAKING NEWS: An extremely important human named Sagar was born on this day. Open your birthday surprise.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+  <div class="bg-balloons" id="balloons" aria-hidden="true"></div>
+  <canvas class="confetti-canvas" id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <a class="lang-toggle" id="lang-toggle" href="?lang=hi" hreflang="hi" lang="hi">हिन्दी</a>
+
+  <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Turn birthday sound on">
+    <span id="sound-icon" aria-hidden="true">🔇</span>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Section 1: Welcome -->
+  <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+    <div class="welcome__inner">
+      <h1 class="welcome__badge" id="welcome-title" data-i18n="w_badge">🚨 BREAKING NEWS 🚨</h1>
+      <h2 class="welcome__headline"><span data-i18n="w_h_a">An extremely important human named </span><span class="text-gradient name-wave" data-wave data-i18n="name">SAGAR</span><span data-i18n="w_h_b"> was born on this day!</span></h2>
+      <p class="welcome__sub" data-i18n="w_sub">Scientists are still trying to figure out how the world survived before him.</p>
+      <button class="btn btn--xl btn--glow" id="open-surprise" type="button" data-i18n="w_open">🎁 Open Your Birthday Surprise</button>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span data-i18n="ticker">BREAKING: Cake supplies at critical levels ✦ Local legend refuses to act his age ✦ Experts confirm: nap postponed ✦ Candle count classified ✦ Birthday boy spotted pretending to be mature ✦ </span>
+        <span data-i18n="ticker">BREAKING: Cake supplies at critical levels ✦ Local legend refuses to act his age ✦ Experts confirm: nap postponed ✦ Candle count classified ✦ Birthday boy spotted pretending to be mature ✦ </span>
+      </div>
+    </div>
+  </section>
+
+  <main id="experience" hidden>
+    <!-- Section 2: Hero -->
+    <section class="section hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <h2 class="hero__title" id="hero-title">🎉 <span data-i18n="h_hb">HAPPY BIRTHDAY, </span><span class="text-gradient name-wave" data-wave data-i18n="name_bang">SAGAR!</span> 🎉</h2>
+        <p class="hero__sub" data-i18n="h_sub">Another year older. Another year wiser. Just kidding, we checked.</p>
+        <p class="badge" data-i18n="h_badge">🏅 Officially 1 Year Closer to Becoming a Legend</p>
+        <div class="hero__cake" data-cake></div>
+        <button class="scroll-hint" id="scroll-hint" type="button" aria-label="Swipe up to continue" data-i18n-aria="h_scroll_aria">
+          <span class="scroll-hint__text" data-i18n="h_scroll">Swipe up</span>
+          <span class="scroll-hint__arrow" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Section 5: Quiz -->
+    <section class="section" id="quiz" aria-labelledby="quiz-title">
+      <div class="container container--narrow">
+        <h2 class="section__title reveal" id="quiz-title" data-i18n="quiz_title">🧪 How Sagar Is Spending His Birthday</h2>
+        <p class="section__lead reveal" data-i18n="quiz_lead">Three questions. Zero accuracy. Maximum diagnosis.</p>
+        <div class="card quiz-card reveal" id="quiz-app" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: Statistics -->
+    <section class="section" id="stats" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 class="section__title reveal" id="stats-title" data-i18n="stats_title">📊 Sagar's Birthday Statistics</h2>
+        <p class="section__lead reveal" data-i18n="stats_lead">Scientifically unverified. Legally questionable. Completely fictional.</p>
+        <p class="swipe-note reveal" aria-hidden="true" data-i18n="swipe">👈 Swipe the cards 👉</p>
+        <div class="stats-grid">
+          <article class="stat-card reveal" style="--value:70%;--accent:var(--pink)">
+            <span class="stat-card__icon" aria-hidden="true">🎂</span>
+            <h3 class="stat-card__label" data-i18n="s_age_l">Age Level</h3>
+            <p class="stat-card__value" data-i18n="s_age_v">EXPERT NOOB</p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+          <article class="stat-card reveal" style="--value:12%;--accent:var(--blue)">
+            <span class="stat-card__icon" aria-hidden="true">🧠</span>
+            <h3 class="stat-card__label" data-i18n="s_wis_l">Wisdom</h3>
+            <p class="stat-card__value" data-i18n="s_wis_v">Loading... 12%</p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+          <article class="stat-card reveal" style="--value:99.9%;--accent:var(--yellow)">
+            <span class="stat-card__icon" aria-hidden="true">😎</span>
+            <h3 class="stat-card__label" data-i18n="s_cool_l">Coolness</h3>
+            <p class="stat-card__value">99.9% <small data-i18n="s_cool_n">(self-certified)</small></p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+          <article class="stat-card reveal" style="--value:35%;--accent:var(--purple)">
+            <span class="stat-card__icon" aria-hidden="true">😴</span>
+            <h3 class="stat-card__label" data-i18n="s_sleep_l">Sleep Schedule</h3>
+            <p class="stat-card__value" data-i18n="s_sleep_v">Unknown</p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+          <article class="stat-card reveal" style="--value:100%;--accent:var(--pink)">
+            <span class="stat-card__icon" aria-hidden="true">🐌</span>
+            <h3 class="stat-card__label" data-i18n="s_proc_l">Procrastination</h3>
+            <p class="stat-card__value" data-i18n="s_proc_v">Legendary</p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+          <article class="stat-card reveal" style="--value:100%;--accent:var(--blue)">
+            <span class="stat-card__icon" aria-hidden="true">🍰</span>
+            <h3 class="stat-card__label" data-i18n="s_cake_l">Birthday Cake Consumption</h3>
+            <p class="stat-card__value" data-i18n="s_cake_v">Unlimited</p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+          <article class="stat-card reveal" style="--value:8%;--accent:var(--yellow)">
+            <span class="stat-card__icon" aria-hidden="true">🫡</span>
+            <h3 class="stat-card__label" data-i18n="s_resp_l">Responsibility Level</h3>
+            <p class="stat-card__value" data-i18n="s_resp_v">Connection Timed Out</p>
+            <div class="meter"><span class="meter__fill"></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Cake -->
+    <section class="section" id="cake" aria-labelledby="cake-title">
+      <div class="container container--narrow">
+        <div class="card cake-card reveal">
+          <h2 class="section__title" id="cake-title" data-i18n="cake_title">Make a wish, Sagar! 🎂</h2>
+          <div class="cake-card__stage" data-cake id="cake-stage"></div>
+          <p class="cake-card__message" id="cake-message" role="status" aria-live="polite"></p>
+          <button class="btn btn--glow" id="cake-btn" type="button" data-i18n="cake_btn">💨 Blow Out the Candles</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Gift -->
+    <section class="section" id="gift" aria-labelledby="gift-title">
+      <div class="container container--narrow">
+        <div class="card gift-card reveal" id="gift-card">
+          <h2 class="section__title" id="gift-title" data-i18n="gift_title">🎁 YOUR EXCLUSIVE BIRTHDAY GIFT</h2>
+          <p class="section__lead" data-i18n="gift_lead">We spent millions creating something special for you.</p>
+          <div class="gift" id="gift-box" aria-hidden="true">
+            <div class="gift__glow"></div>
+            <div class="gift__lid"></div>
+            <div class="gift__body"></div>
+          </div>
+          <button class="btn btn--glow" id="gift-btn" type="button" data-i18n="gift_btn">UNLOCK MY GIFT</button>
+          <div class="reward" id="reward" hidden>
+            <p class="reward__achievement" data-i18n="r_ach">🏆 ACHIEVEMENT UNLOCKED</p>
+            <h3 class="reward__title" data-i18n="r_title">CONGRATULATIONS, SAGAR!</h3>
+            <p class="reward__lead" data-i18n="r_lead">You've officially won:</p>
+            <ul class="reward__list">
+              <li><span aria-hidden="true">✨</span> <span data-i18n="r_1">Unlimited excuses for today.</span> <b>+100 XP</b></li>
+              <li><span aria-hidden="true">🍕</span> <span data-i18n="r_2">First priority on the birthday food.</span> <b>+250 XP</b></li>
+              <li><span aria-hidden="true">😴</span> <span data-i18n="r_3">Permission to do absolutely nothing.</span> <b>+500 XP</b></li>
+              <li><span aria-hidden="true">👑</span> <span data-i18n="r_4">The prestigious title of Birthday Legend.</span> <b>+9001 XP</b></li>
+            </ul>
+            <p class="reward__terms" data-i18n="r_terms">VALID FOR 24 HOURS. TERMS AND CONDITIONS: DON'T BE ANNOYING.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Finale -->
+    <section class="section finale" id="finale" aria-labelledby="finale-title">
+      <div class="hearts" id="hearts" aria-hidden="true"></div>
+      <div class="container container--narrow finale__inner">
+        <h2 class="section__title reveal" id="finale-title" data-i18n="f_title">Jokes Aside, Happy Birthday, Sagar ❤️</h2>
+        <div class="finale__message reveal">
+          <p data-i18n="f_p1">Life gets better when good people are around, and today is all about celebrating you. May your year be filled with happiness, success, unforgettable memories, good health, and enough money to stop checking your bank balance before ordering food.</p>
+          <p data-i18n="f_p2">Keep laughing, keep growing, and keep being the amazing person you are.</p>
+          <p data-i18n="f_p3">Here's to another year of crazy memories, big wins, and questionable decisions.</p>
+          <p class="finale__sign" data-i18n="f_sign">Happy Birthday, Sagar! 🎂🥳</p>
+        </div>
+        <div class="finale__cake" data-cake aria-hidden="true"></div>
+        <div class="btn-row">
+          <button class="btn btn--glow" id="replay-btn" type="button" data-i18n="f_replay">🔁 Replay the Surprise</button>
+          <button class="btn btn--ghost" id="share-btn" type="button" data-i18n="f_share">🔗 Share This Website</button>
+        </div>
+        <p class="finale__foot" data-i18n="f_foot">Made with love, cake, and questionable humor.</p>
+      </div>
+    </section>
+  </main>
+
+  <template id="cake-template">
+    <div class="cake">
+      <div class="cake__candles">
+        <span class="candle"><i class="flame"></i><i class="smoke"></i></span>
+        <span class="candle"><i class="flame"></i><i class="smoke"></i></span>
+        <span class="candle"><i class="flame"></i><i class="smoke"></i></span>
+      </div>
+      <div class="cake__layer cake__layer--top"></div>
+      <div class="cake__layer cake__layer--bottom"></div>
+      <div class="cake__plate"></div>
+    </div>
+  </template>
+
+  <script src="js/messages.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
