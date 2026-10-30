@@ -515,3 +515,15 @@ html[lang="hi"] body { line-height: 1.7; }
 @keyframes hint-fade { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
 @keyframes arrow-fade { 0% { opacity: 0; transform: translateY(-8px) rotate(45deg); } 50% { opacity: 1; } 100% { opacity: 0; transform: translateY(6px) rotate(45deg); } }
 @media (prefers-reduced-motion: reduce) { .scroll-hint, .scroll-hint__text, .scroll-hint__arrow { animation: none; } }
+
+/* Larger, more prominent scroll hint on desktop / big screens */
+@media (min-width: 900px) {
+  .scroll-hint { bottom: 2rem; gap: 0.6rem; padding: 0.75rem 1.5rem; font-size: 1.35rem; letter-spacing: 0.12em; }
+  .scroll-hint__arrows { height: 56px; }
+  .scroll-hint__arrow { width: 24px; height: 24px; margin-top: -8px; border-width: 0 5px 5px 0; }
+}
+@media (min-width: 1500px) {
+  .scroll-hint { bottom: 2.5rem; font-size: 1.75rem; }
+  .scroll-hint__arrows { height: 72px; }
+  .scroll-hint__arrow { width: 32px; height: 32px; border-width: 0 6px 6px 0; }
+}
