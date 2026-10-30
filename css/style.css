@@ -503,3 +503,15 @@ button { font: inherit; color: inherit; }
 html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3 { line-height: 1.4; }
 html[lang="hi"] body { line-height: 1.7; }
 @media (min-width: 960px) { .lang-toggle { top: 20px; left: 20px; } }
+
+/* ---------- Scroll hint: rises from the bottom, fades in and out ---------- */
+.scroll-hint { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 5; margin: 0; transform: translateX(-50%); animation: hint-rise 1.2s 0.8s cubic-bezier(0.22, 1, 0.36, 1) both, hint-float 2.6s 2s ease-in-out infinite; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
+.scroll-hint__text { animation: hint-fade 2s ease-in-out infinite; }
+.scroll-hint__arrows { display: flex; flex-direction: column; align-items: center; height: 34px; }
+.scroll-hint__arrow { width: 14px; height: 14px; margin-top: -4px; border-width: 0 3px 3px 0; border-style: solid; border-color: currentColor; transform: rotate(45deg); animation: arrow-fade 1.6s ease-in-out infinite; }
+.scroll-hint__arrow:nth-child(2) { animation-delay: 0.3s; }
+@keyframes hint-rise { from { opacity: 0; transform: translate(-50%, 70px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes hint-float { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -8px); } }
+@keyframes hint-fade { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+@keyframes arrow-fade { 0% { opacity: 0; transform: translateY(-8px) rotate(45deg); } 50% { opacity: 1; } 100% { opacity: 0; transform: translateY(6px) rotate(45deg); } }
+@media (prefers-reduced-motion: reduce) { .scroll-hint, .scroll-hint__text, .scroll-hint__arrow { animation: none; } }

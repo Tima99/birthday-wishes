@@ -245,7 +245,7 @@
 
     on(button, 'click', () => setEnabled(!enabled));
 
-    return { sfx };
+    return { sfx, enable: () => { if (!enabled) setEnabled(true); } };
   })();
 
   /* ------------------------------------------------------------- Background */
@@ -602,6 +602,7 @@
     function open() {
       openButton.classList.add('is-pressed');
       Confetti.burstFrom(openButton, 150);
+      Sound.enable(); // the click is a user gesture, so audio may start
       Sound.sfx('tada');
       welcome.classList.add('is-leaving');
       clearTimeout(timer);
